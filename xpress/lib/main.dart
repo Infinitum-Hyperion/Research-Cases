@@ -15,15 +15,54 @@ class XPressApp extends StatelessWidget {
       initialRoute: '/home',
       routes: {
         '/home': (context) {
-          return const Center(
-            child: Text('XPress Blog'),
+          return Material(
+            child: Center(
+              child: Column(
+                children: [
+                  const Text('XPress Blog'),
+                  const SizedBox(height: 20),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/login');
+                      },
+                      child: const Text('Login')),
+                ],
+              ),
+            ),
           );
         },
-        '/blog1': (context) {
+        '/public-page': (context) {
+          return Center();
+        },
+        '/member-only-page': (context) {
           return Center();
         },
         '/login': (context) {
-          return Center();
+          return Material(
+            child: Center(
+              child: Container(
+                width: 400,
+                height: 700,
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Email Address',
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
       },
     );
