@@ -1,11 +1,13 @@
 library xpress;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 part './home_view.dart';
 part './public_view.dart';
 part './login_view.dart';
 part './member_only_view.dart';
+part './public_blog.dart';
 
 void main() {
   runApp(const XPressApp());
@@ -30,6 +32,7 @@ class XPressApp extends StatelessWidget {
         '/public-page': (context) => PublicView(),
         '/member-only-page': (context) => MemberOnlyView(),
         '/login': (context) => LoginView(),
+        '/public-blog': (context) => PublicBlog(),
       },
     );
   }
