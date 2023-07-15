@@ -1,6 +1,5 @@
 library xpress;
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 part './home_view.dart';
@@ -8,6 +7,7 @@ part './public_view.dart';
 part './login_view.dart';
 part './member_only_view.dart';
 part './public_blog.dart';
+part './member_only_blog.dart';
 
 void main() {
   runApp(const XPressApp());
